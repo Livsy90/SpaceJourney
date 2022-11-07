@@ -14,6 +14,16 @@
 		D6A592032918EAFB00C46A21 /* SpaceJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592022918EAFB00C46A21 /* SpaceJourneyTests.swift */; };
 		D6A5920D2918EAFB00C46A21 /* SpaceJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A5920C2918EAFB00C46A21 /* SpaceJourneyUITests.swift */; };
 		D6A5920F2918EAFB00C46A21 /* SpaceJourneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A5920E2918EAFB00C46A21 /* SpaceJourneyUITestsLaunchTests.swift */; };
+		D6A592202918EC2700C46A21 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A5921F2918EC2700C46A21 /* HomeView.swift */; };
+		D6A592232918EC3600C46A21 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592222918EC3600C46A21 /* HomeViewModel.swift */; };
+		D6A592252918EC4B00C46A21 /* AstronomicalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592242918EC4B00C46A21 /* AstronomicalObject.swift */; };
+		D6A592272918EC5100C46A21 /* AstronomicalObjectKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592262918EC5100C46A21 /* AstronomicalObjectKind.swift */; };
+		D6A5922B2918EC6900C46A21 /* View+Adds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A5922A2918EC6900C46A21 /* View+Adds.swift */; };
+		D6A5922D2918EC7200C46A21 /* Double+Adds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A5922C2918EC7200C46A21 /* Double+Adds.swift */; };
+		D6A592312918EC9E00C46A21 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592302918EC9E00C46A21 /* CustomCorner.swift */; };
+		D6A592332918ECC800C46A21 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592322918ECC800C46A21 /* OffsetKey.swift */; };
+		D6A592352918ED6100C46A21 /* ScaledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592342918ED6100C46A21 /* ScaledButtonStyle.swift */; };
+		D6A592372918EDB800C46A21 /* AstronomicalObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A592362918EDB800C46A21 /* AstronomicalObjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,16 @@
 		D6A592082918EAFB00C46A21 /* SpaceJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A5920C2918EAFB00C46A21 /* SpaceJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceJourneyUITests.swift; sourceTree = "<group>"; };
 		D6A5920E2918EAFB00C46A21 /* SpaceJourneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceJourneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6A5921F2918EC2700C46A21 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D6A592222918EC3600C46A21 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D6A592242918EC4B00C46A21 /* AstronomicalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomicalObject.swift; sourceTree = "<group>"; };
+		D6A592262918EC5100C46A21 /* AstronomicalObjectKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomicalObjectKind.swift; sourceTree = "<group>"; };
+		D6A5922A2918EC6900C46A21 /* View+Adds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Adds.swift"; sourceTree = "<group>"; };
+		D6A5922C2918EC7200C46A21 /* Double+Adds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Adds.swift"; sourceTree = "<group>"; };
+		D6A592302918EC9E00C46A21 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		D6A592322918ECC800C46A21 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
+		D6A592342918ED6100C46A21 /* ScaledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButtonStyle.swift; sourceTree = "<group>"; };
+		D6A592362918EDB800C46A21 /* AstronomicalObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomicalObjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +114,8 @@
 		D6A591F02918EAF800C46A21 /* SpaceJourney */ = {
 			isa = PBXGroup;
 			children = (
+				D6A592282918EC5700C46A21 /* Shared */,
+				D6A5921B2918EBFA00C46A21 /* Home */,
 				D6A591F12918EAF800C46A21 /* SpaceJourneyApp.swift */,
 				D6A591F32918EAF800C46A21 /* ContentView.swift */,
 				D6A591F52918EAFA00C46A21 /* Assets.xcassets */,
@@ -125,6 +147,70 @@
 				D6A5920E2918EAFB00C46A21 /* SpaceJourneyUITestsLaunchTests.swift */,
 			);
 			path = SpaceJourneyUITests;
+			sourceTree = "<group>";
+		};
+		D6A5921B2918EBFA00C46A21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D6A5921E2918EC1000C46A21 /* View */,
+				D6A5921D2918EC0A00C46A21 /* ViewModel */,
+				D6A5921C2918EC0000C46A21 /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D6A5921C2918EC0000C46A21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6A592242918EC4B00C46A21 /* AstronomicalObject.swift */,
+				D6A592262918EC5100C46A21 /* AstronomicalObjectKind.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6A5921D2918EC0A00C46A21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6A592222918EC3600C46A21 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D6A5921E2918EC1000C46A21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6A5921F2918EC2700C46A21 /* HomeView.swift */,
+				D6A592362918EDB800C46A21 /* AstronomicalObjectView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6A592282918EC5700C46A21 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D6A5922F2918EC9700C46A21 /* Models */,
+				D6A592292918EC5C00C46A21 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D6A592292918EC5C00C46A21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6A5922A2918EC6900C46A21 /* View+Adds.swift */,
+				D6A5922C2918EC7200C46A21 /* Double+Adds.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6A5922F2918EC9700C46A21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6A592302918EC9E00C46A21 /* CustomCorner.swift */,
+				D6A592322918ECC800C46A21 /* OffsetKey.swift */,
+				D6A592342918ED6100C46A21 /* ScaledButtonStyle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +343,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A592202918EC2700C46A21 /* HomeView.swift in Sources */,
 				D6A591F42918EAF800C46A21 /* ContentView.swift in Sources */,
+				D6A592272918EC5100C46A21 /* AstronomicalObjectKind.swift in Sources */,
+				D6A592312918EC9E00C46A21 /* CustomCorner.swift in Sources */,
+				D6A5922B2918EC6900C46A21 /* View+Adds.swift in Sources */,
+				D6A592372918EDB800C46A21 /* AstronomicalObjectView.swift in Sources */,
 				D6A591F22918EAF800C46A21 /* SpaceJourneyApp.swift in Sources */,
+				D6A592332918ECC800C46A21 /* OffsetKey.swift in Sources */,
+				D6A592232918EC3600C46A21 /* HomeViewModel.swift in Sources */,
+				D6A5922D2918EC7200C46A21 /* Double+Adds.swift in Sources */,
+				D6A592252918EC4B00C46A21 /* AstronomicalObject.swift in Sources */,
+				D6A592352918ED6100C46A21 /* ScaledButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
