@@ -14,8 +14,6 @@ struct HomeView: View {
     @EnvironmentObject var viewModel: HomeViewModel
     
     @Namespace var animation
-    @State var currentItem: AstronomicalObject?
-    @State var showDetailPage: Bool = false
     @State var animateView: Bool = false
     @State var animateContent: Bool = false
     @State var scrollOffset: CGFloat = 0
@@ -26,43 +24,43 @@ struct HomeView: View {
                 Text("Space journey")
                     .font(.largeTitle.bold())
                     .padding()
-                    .opacity(showDetailPage ? 0 : 1)
+                    .opacity(viewModel.showDetailPage ? 0 : 1)
                     .frame(alignment: .leading)
                 
                 ForEach(viewModel.items) { item in
                     Button {
                         withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
-                            currentItem = item
-                            showDetailPage = true
+                            viewModel.currentItem = item
+                            viewModel.showDetailPage = true
                         }
                     } label: {
                         CardView(item: item)
-                            .scaleEffect(currentItem?.id == item.id && showDetailPage ? 1 : 0.93)
+                            .scaleEffect(viewModel.currentItem?.id == item.id && viewModel.showDetailPage ? 1 : 0.93)
                     }
                     .buttonStyle(ScaledButtonStyle())
-                    .opacity(showDetailPage ? (currentItem?.id == item.id ? 1 : 0) : 1)
-                    .zIndex(currentItem?.id == item.id && showDetailPage ? 10 : 0)
+                    .opacity(viewModel.showDetailPage ? (viewModel.currentItem?.id == item.id ? 1 : 0) : 1)
+                    .zIndex(viewModel.currentItem?.id == item.id && viewModel.showDetailPage ? 10 : 0)
                 }
             }
             .padding(.vertical)
         }
         .overlay {
-            if let currentItem = currentItem,showDetailPage {
+            if let currentItem = viewModel.currentItem, viewModel.showDetailPage {
                 DetailView(item: currentItem)
                     .ignoresSafeArea(.container, edges: .top)
             }
         }
         .background(alignment: .top) {
             RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .fill(Color("BG"))
+                .fill(Color(uiColor: .systemGray5))
                 .frame(height: animateView ? nil : 350, alignment: .top)
                 .scaleEffect(animateView ? 1 : 0.93)
                 .opacity(animateView ? 1 : 0)
                 .ignoresSafeArea()
         }
+        .statusBar(hidden: viewModel.showDetailPage)
     }
     
-    // MARK: CardView
     @ViewBuilder
     private func CardView(item: AstronomicalObject) -> some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -99,7 +97,7 @@ struct HomeView: View {
                 }
                 .foregroundColor(.primary)
                 .padding()
-                .offset(y: currentItem?.id == item.id && animateView ? safeArea().top : 0)
+                .offset(y: viewModel.currentItem?.id == item.id && animateView ? safeArea().top : 0)
             }
             
             VStack(alignment: .leading, spacing: 4) {
@@ -116,7 +114,7 @@ struct HomeView: View {
         }
         .background{
             RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .fill(Color("BG"))
+                .fill(Color(uiColor: .systemGray5))
         }
         .matchedGeometryEffect(id: item.id, in: animation)
     }
@@ -155,8 +153,8 @@ struct HomeView: View {
                 }
                 
                 withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7).delay(0.05)) {
-                    currentItem = nil
-                    showDetailPage = false
+                    viewModel.currentItem = nil
+                    viewModel.showDetailPage = false
                 }
             } label: {
                 Image(systemName: "xmark.circle.fill")
