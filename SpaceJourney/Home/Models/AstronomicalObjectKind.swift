@@ -37,13 +37,13 @@ enum AstronomicalObjectKind: String, CaseIterable {
         case .saturn:
             return "Green Nebula 2 - 1024x1024"
         case .pluto:
-            return "Green Nebula 6 - 1024x1024"
+            return "Blue Nebula 4 - 1024x1024"
         case .mars:
             return "Purple Nebula 1 - 1024x1024"
         case .sun:
-            return "Starfield 2 - 1024x1024"
+            return "Blue Nebula 1 - 1024x1024"
         case .mercury:
-            return "Purple Nebula 8 - 1024x1024"
+            return "Blue Nebula 2 - 1024x1024"
         case .uranus:
             return "Green Nebula 3 - 1024x1024"
         case .neptune:
